@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:dicee_app_/magic_ball.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -73,6 +74,17 @@ class _DicePageState extends State<DicePage> {
             ],
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.arrow_forward),
+        onPressed: () => Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (BuildContext context) => MagicBall(),
+          ),
+        ),
+        backgroundColor: Colors.green,
+        tooltip: 'Magic Ball Challenge',
       ),
     );
   }
